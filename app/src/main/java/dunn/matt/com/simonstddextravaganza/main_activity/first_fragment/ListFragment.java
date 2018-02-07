@@ -14,6 +14,7 @@ import java.util.List;
 
 import dunn.matt.com.simonstddextravaganza.R;
 import dunn.matt.com.simonstddextravaganza.data.FruitModel;
+import dunn.matt.com.simonstddextravaganza.utils.RecyclerItemClickListener;
 
 public class ListFragment extends Fragment implements ListFragmentContract.View{
 
@@ -61,6 +62,20 @@ public class ListFragment extends Fragment implements ListFragmentContract.View{
         re_fruit_list.setLayoutManager(linearLayoutManager);
         mAdapter = new ListFragmentAdapter(context, fruitList);
         re_fruit_list.setAdapter(mAdapter);
+
+
+        re_fruit_list.addOnItemTouchListener(new RecyclerItemClickListener(context, re_fruit_list,
+                new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+
+            }
+        }));
     }
 
     @Override

@@ -21,7 +21,7 @@ public class ListFragmentAdapter extends RecyclerView.Adapter<ListFragmentAdapte
     private Context context;
     private List<FruitModel> fruitList;
 
-    public ListFragmentAdapter(Context context, List<FruitModel> fruitList){
+    ListFragmentAdapter(Context context, List<FruitModel> fruitList){
         this.context = context;
         this.fruitList = fruitList;
     }
@@ -46,11 +46,11 @@ public class ListFragmentAdapter extends RecyclerView.Adapter<ListFragmentAdapte
         return fruitList.get(position);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txt_fruit_name;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             txt_fruit_name = (TextView)itemView.findViewById(R.id.txt_fruit_name);
         }

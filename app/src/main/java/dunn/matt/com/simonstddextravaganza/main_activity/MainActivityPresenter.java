@@ -1,6 +1,7 @@
 package dunn.matt.com.simonstddextravaganza.main_activity;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONObject;
 

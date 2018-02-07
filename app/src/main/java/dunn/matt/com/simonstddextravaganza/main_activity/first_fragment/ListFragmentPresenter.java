@@ -6,5 +6,4 @@ package dunn.matt.com.simonstddextravaganza.main_activity.first_fragment;
 
 public class ListFragmentPresenter implements ListFragmentContract.Presenter {
 
-
 }
