@@ -8,11 +8,11 @@ import android.content.Context;
 
 public interface DataSource {
 
-    interface FruitCallback{
+    interface NetworkCallbacks {
         void onSuccessfullFrutCall(String response);
         void onFailedFruitCallback(String response);
     }
 
-    void getFruits(Context context, String url, FruitCallback fruitCallback);
+    void getFruits(Context context, String url, NetworkCallbacks fruitCallback);
 
 }

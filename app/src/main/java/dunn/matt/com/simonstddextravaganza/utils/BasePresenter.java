@@ -5,6 +5,5 @@ package dunn.matt.com.simonstddextravaganza.utils;
  */
 
 public interface BasePresenter {
-    void start();
 
 }

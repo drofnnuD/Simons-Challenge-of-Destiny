@@ -11,16 +11,16 @@ import dunn.matt.com.simonstddextravaganza.data.source.DataSource;
 public class RemoteDataSource implements DataSource{
 
     @Override
-    public void getFruits(Context context, String url, final FruitCallback fruitCallback) {
+    public void getFruits(Context context, String url, final NetworkCallbacks callbacks) {
         NetworkManager.getInstance(context).makeJsonObjectGetRequest(url, new VolleySingletonListener() {
             @Override
             public void onResult(Object object) {
-                fruitCallback.onSuccessfullFrutCall(object.toString());
+                callbacks.onSuccessfullFrutCall(object.toString());
             }
         }, new VolleySingletonErrorListener() {
             @Override
             public void onErrorResult(Exception error) {
-                fruitCallback.onFailedFruitCallback(error.toString());
+                callbacks.onFailedFruitCallback(error.toString());
             }
         });
     }

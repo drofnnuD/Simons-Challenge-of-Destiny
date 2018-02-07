@@ -17,8 +17,8 @@ public class DataRepository implements DataSource {
     }
 
     @Override
-    public void getFruits(Context context, String url, FruitCallback fruitCallback) {
-        remoteDataSource.getFruits(context, url, fruitCallback);
+    public void getFruits(Context context, String url, NetworkCallbacks callbacks) {
+        remoteDataSource.getFruits(context, url, callbacks);
     }
 
 }

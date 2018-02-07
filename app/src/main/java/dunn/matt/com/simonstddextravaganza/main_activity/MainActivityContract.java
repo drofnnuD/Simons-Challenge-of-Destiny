@@ -15,12 +15,12 @@ import dunn.matt.com.simonstddextravaganza.utils.BaseView;
 public interface MainActivityContract {
 
     interface View extends BaseView<Presenter>{
-        void setFirstFragment(List<FruitModel> fruitList);
+        void createListForFragment(String jsonString) throws Exception;
+        void showSomethingWentWrongDialog();
     }
 
     interface Presenter extends BasePresenter{
         void getThemFruits(String url, Context context);
-        void createListForFragment(String jsonString) throws Exception;
     }
 
 }
