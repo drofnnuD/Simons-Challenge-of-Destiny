@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity implements MainActivityContract.V
 
         setUpFragMan();
         mPresenter = new MainActivityPresenter(this,
-                new DataRepository(new RemoteDataSource()));
+                new DataRepository(new RemoteDataSource(this)));
         fruitList = new ArrayList<>();
 
         getFruit();
@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity implements MainActivityContract.V
     }
 
     private void getFruit(){
-        mPresenter.getThemFruits("https://raw.githubusercontent.com/bertthedefender/ccs/master/fruit.json", this);
+        mPresenter.getThemFruits("https://raw.githubusercontent.com/bertthedefender/ccs/master/fruit.json");
     }
 
     private void setUpFragMan(){

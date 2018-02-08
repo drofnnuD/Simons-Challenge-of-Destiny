@@ -24,7 +24,7 @@ public class MainActivityTest {
     @Test
     public void testGetThemFruits(){
         String TEST_URL = "TEST_URL";
-        testablePresenter.getThemFruits(TEST_URL, null);
+        testablePresenter.getThemFruits(TEST_URL);
         Assert.assertEquals(mockDataRepo.url, TEST_URL);
     }
 
@@ -66,7 +66,7 @@ public class MainActivityTest {
         String url;
 
         @Override
-        public void getFruits(Context context, String url, NetworkCallbacks fruitCallback) {
+        public void getFruits(String url, NetworkCallbacks fruitCallback) {
             this.url = url;
         }
     }

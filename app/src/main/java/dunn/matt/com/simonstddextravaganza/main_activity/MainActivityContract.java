@@ -20,7 +20,7 @@ public interface MainActivityContract {
     }
 
     interface Presenter extends BasePresenter{
-        void getThemFruits(String url, Context context);
+        void getThemFruits(String url);
     }
 
 }

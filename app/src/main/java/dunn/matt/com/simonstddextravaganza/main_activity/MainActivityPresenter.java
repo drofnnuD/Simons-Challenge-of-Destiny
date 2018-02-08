@@ -1,21 +1,10 @@
 package dunn.matt.com.simonstddextravaganza.main_activity;
 
-import android.content.Context;
-import android.util.Log;
-
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import dunn.matt.com.simonstddextravaganza.data.FruitModel;
-import dunn.matt.com.simonstddextravaganza.data.source.DataRepository;
 import dunn.matt.com.simonstddextravaganza.data.source.DataSource;
-import dunn.matt.com.simonstddextravaganza.data.source.remote.RemoteDataSource;
-
-/**
- * Created by Matt on 02/08/2017.
- */
 
 public class MainActivityPresenter implements MainActivityContract.Presenter, DataSource.NetworkCallbacks {
 
@@ -31,8 +20,8 @@ public class MainActivityPresenter implements MainActivityContract.Presenter, Da
     }
 
     @Override
-    public void getThemFruits(String url, Context context) {
-        dataSource.getFruits(context, url, this);
+    public void getThemFruits(String url) {
+        dataSource.getFruits(url, this);
     }
 
     @Override

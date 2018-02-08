@@ -13,6 +13,6 @@ public interface DataSource {
         void onFailedFruitCallback(String response);
     }
 
-    void getFruits(Context context, String url, NetworkCallbacks fruitCallback);
+    void getFruits(String url, NetworkCallbacks fruitCallback);
 
 }

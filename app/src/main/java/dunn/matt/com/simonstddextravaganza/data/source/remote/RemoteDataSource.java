@@ -10,8 +10,14 @@ import dunn.matt.com.simonstddextravaganza.data.source.DataSource;
 
 public class RemoteDataSource implements DataSource{
 
+    private Context context;
+
+    public RemoteDataSource(Context context){
+        this.context = context;
+    }
+
     @Override
-    public void getFruits(Context context, String url, final NetworkCallbacks callbacks) {
+    public void getFruits(String url, final NetworkCallbacks callbacks) {
         NetworkManager.getInstance(context).makeJsonObjectGetRequest(url, new VolleySingletonListener() {
             @Override
             public void onResult(Object object) {

@@ -11,14 +11,15 @@ import dunn.matt.com.simonstddextravaganza.data.source.remote.RemoteDataSource;
 public class DataRepository implements DataSource {
 
     private RemoteDataSource remoteDataSource;
+    private Context context;
 
     public DataRepository(RemoteDataSource remoteDataSource){
         this.remoteDataSource = remoteDataSource;
     }
 
     @Override
-    public void getFruits(Context context, String url, NetworkCallbacks callbacks) {
-        remoteDataSource.getFruits(context, url, callbacks);
+    public void getFruits(String url, NetworkCallbacks callbacks) {
+        remoteDataSource.getFruits(url, callbacks);
     }
 
 }
